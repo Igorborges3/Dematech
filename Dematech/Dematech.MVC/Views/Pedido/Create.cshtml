@@ -1,0 +1,164 @@
+﻿@model Bematech.MVC.ViewModels.PedidoViewModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <form>
+        <fieldset class="form-group">
+            <legend class="text-center">Pedido de Vendas</legend>
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IdCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-3">
+                                @Html.DropDownList("IdCliente", ViewBag.Clientes as SelectList, "---- Selecione ----", new { @class = "btn btn-default dropdown-toggle" })
+                                @Html.ValidationMessageFor(model => model.IdCliente, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DataEntrega, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                <input type="text" id="dataFiltro" placeholder="Dia/M&ecirc;s/Ano" autocomplete="off" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h3 class="text-center">Itens do pedido</h3>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IdProduto, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("IdProduto", ViewBag.Produtos as SelectList, "---- Selecione ----", new { @class = "btn btn-default dropdown-toggle", @id = "selectProduto" })
+                                @Html.ValidationMessageFor(model => model.IdProduto, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.Label("Quantidade", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.Editor("quantidade", new { htmlAttributes = new { @class = "text-field", @type = "number", @min = 1, @id = "idQtd" } })
+
+                                @Html.ValidationMessageFor(model => model.Quantidade, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <button type="button" value="Adicionar" onclick="addRow()" class="btn btn-default">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <table id="tabela" class="display nowrap" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+
+                            @Html.Hidden("IdProduto", new { htmlAttributes = new { @class = "hdata", @id = "IdProduto" } })
+                            <th class="hdata">
+                                @Html.DisplayName("Descrição")
+                            </th>
+                            
+                            <th class="hdata">
+                                @Html.DisplayName("Qtd")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Valor")
+                            </th>
+                            <th class="hdata">
+                                @Html.DisplayName("Valor Total")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Ação")
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Produto != null)
+                        {
+                            foreach (var item in Model.Produto)
+                            {
+                                <tr>
+                                    @Html.HiddenFor(modelItem => item.IdProduto, new { htmlAttributes = new { @class = "data", @id = "IdProduto" } })
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Descricao, new { htmlAttributes = new { @class = "data" } })
+                                    </td>
+                                    <td>
+                                        @Html.Display("Quantidade")
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Valor, new { htmlAttributes = new { @class = "data" } })
+                                    </td>
+                                    <td>
+                                        @Html.Display("Valor Total", new { htmlAttributes = new { @class = "data" } })
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                    </td>
+                                </tr>
+                            }
+                        }
+
+                    </tbody>
+                </table>
+
+
+
+                <div class="form-horizontal">
+                    <div class="label">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ValorTotal, htmlAttributes: new { @class = "control-label" })
+                            <div class="col-md-5">
+                                @Html.LabelFor(model => model.ValorTotal, new { htmlAttributes = new { @class = "control-label" } })
+                                @Html.ValidationMessageFor(model => model.ValorTotal, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8"></div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ValorTotal, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-5">
+                                @Html.EditorFor(model => model.ValorTotal, new { htmlAttributes = new { @class = "form-control", @id = "idTotal", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.ValorTotal, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8"></div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-1">
+                                <button type="button" onclick="salvar()" value="Salvar" class="btn btn-default">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+    </form>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

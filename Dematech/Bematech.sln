@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B0ACA8FE-F0AF-467D-AD7C-15D3CF16A66D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{C0477B4E-C16A-4835-86C7-6DBBF0FE0D98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{17C8886F-8EFF-4C71-8052-61BB2D1FE69F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{F8FC04D6-F60D-4F9A-A610-93A10D0D30E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bematech.MVC", "Dematech.MVC\Bematech.MVC.csproj", "{21B9C3F4-1F42-4A84-B07D-723F1CB58C84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bematech.Application", "Dematech.Application\Bematech.Application.csproj", "{51316CF7-8C6C-470A-A177-CF25E6ED084B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bematech.Domain", "Dematech.Domain\Bematech.Domain.csproj", "{39525734-EBC7-4E6B-BCED-A3BD34F6A86F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bematech.Infra", "Dematech.Infra.Data\Bematech.Infra.csproj", "{73B4BFE7-F220-4737-80C2-7AA6F54CE7D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21B9C3F4-1F42-4A84-B07D-723F1CB58C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B9C3F4-1F42-4A84-B07D-723F1CB58C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B9C3F4-1F42-4A84-B07D-723F1CB58C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B9C3F4-1F42-4A84-B07D-723F1CB58C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51316CF7-8C6C-470A-A177-CF25E6ED084B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51316CF7-8C6C-470A-A177-CF25E6ED084B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51316CF7-8C6C-470A-A177-CF25E6ED084B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51316CF7-8C6C-470A-A177-CF25E6ED084B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39525734-EBC7-4E6B-BCED-A3BD34F6A86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39525734-EBC7-4E6B-BCED-A3BD34F6A86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39525734-EBC7-4E6B-BCED-A3BD34F6A86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39525734-EBC7-4E6B-BCED-A3BD34F6A86F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B4BFE7-F220-4737-80C2-7AA6F54CE7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B4BFE7-F220-4737-80C2-7AA6F54CE7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B4BFE7-F220-4737-80C2-7AA6F54CE7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B4BFE7-F220-4737-80C2-7AA6F54CE7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21B9C3F4-1F42-4A84-B07D-723F1CB58C84} = {B0ACA8FE-F0AF-467D-AD7C-15D3CF16A66D}
+		{51316CF7-8C6C-470A-A177-CF25E6ED084B} = {C0477B4E-C16A-4835-86C7-6DBBF0FE0D98}
+		{39525734-EBC7-4E6B-BCED-A3BD34F6A86F} = {17C8886F-8EFF-4C71-8052-61BB2D1FE69F}
+		{73B4BFE7-F220-4737-80C2-7AA6F54CE7D3} = {F8FC04D6-F60D-4F9A-A610-93A10D0D30E2}
+	EndGlobalSection
+EndGlobal

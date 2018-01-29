@@ -1,0 +1,14 @@
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\Produto.Infra.Data.dll.config
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\Produto.Infra.Data.dll
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\Produto.Infra.Data.pdb
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\Bematech.Domain.dll
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\EntityFramework.dll
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\Bematech.Domain.pdb
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\EntityFramework.xml
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\obj\Debug\Bematech.Infra.csprojResolveAssemblyReference.cache
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\obj\Debug\Bematech.Infra.Data.Migrations.init.resources
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\obj\Debug\Bematech.Infra.csproj.GenerateResource.Cache
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\obj\Debug\Produto.Infra.Data.dll
+D:\Projetos\Dematech\Dematech\Dematech.Infra.Data\obj\Debug\Produto.Infra.Data.pdb

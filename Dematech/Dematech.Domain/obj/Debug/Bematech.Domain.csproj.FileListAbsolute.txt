@@ -1,0 +1,4 @@
+D:\Projetos\Dematech\Dematech\Dematech.Domain\bin\Debug\Bematech.Domain.dll
+D:\Projetos\Dematech\Dematech\Dematech.Domain\bin\Debug\Bematech.Domain.pdb
+D:\Projetos\Dematech\Dematech\Dematech.Domain\obj\Debug\Bematech.Domain.dll
+D:\Projetos\Dematech\Dematech\Dematech.Domain\obj\Debug\Bematech.Domain.pdb
